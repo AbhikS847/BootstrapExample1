@@ -1,4 +1,5 @@
 import React from 'react';
+import {Container,Row,Col} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 class Orders extends React.Component {
@@ -33,6 +34,14 @@ class Orders extends React.Component {
             </NavLink>
           </form>
         </nav>
+        <Container>
+          <Row className="px-2 py-2 d-none d-sm-flex">
+            <Col md={5} lg={4}>Basic info</Col>
+            <Col md={5} lg={4}>Deliver on</Col>
+            <Col md={2} lg={2}>Products</Col>
+            <Col md={1} lg={1}>Quantity</Col>
+          </Row>
+          </Container>
       </div>
     );
   }

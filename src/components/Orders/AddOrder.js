@@ -109,7 +109,7 @@ class AddOrder extends React.Component {
               </Col>
             </Row>
           </div>
-          <Table bordered >
+          <Table white bordered >
   <thead>
     <tr>
       <th>Quantity</th>
@@ -121,10 +121,8 @@ class AddOrder extends React.Component {
   </thead>
   <tbody>
     <tr>
-      <td>  <Form.Group controlId="formPlaintextEmail">
-    <Col>
-      <Form.Control />
-    </Col>
+      <td style={{width:"95px"}}>  <Form.Group controlId="formPlaintextEmail">
+      <Form.Control size="sm"/>
   </Form.Group></td>
       <td>
       <Form.Group controlId="deliverInformation">
