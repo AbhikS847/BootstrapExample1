@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {Container, Button, Row, Form, Col,Dropdown,DropdownButton} from 'react-bootstrap';
+import {Container, Button, Row, Form, Col,Table} from 'react-bootstrap';
 
 class AddOrder extends React.Component {
   constructor(props) {
@@ -97,7 +97,7 @@ class AddOrder extends React.Component {
             <Row>
               <Col sm={12}>
                 {' '}
-                <Form.Group controlId="earliestArrival">
+                <Form.Group controlId="deliverInformation">
                   <Form.Label>Deliver to</Form.Label>
                   <Form.Control as="select" placeholder="Choose client">
       <option>Anthony</option>
@@ -109,6 +109,58 @@ class AddOrder extends React.Component {
               </Col>
             </Row>
           </div>
+          <Table bordered >
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Product</th>
+      <th>Variant</th>
+      <th>Size</th>
+      <th>Flavour</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>  <Form.Group controlId="formPlaintextEmail">
+    <Col>
+      <Form.Control />
+    </Col>
+  </Form.Group></td>
+      <td>
+      <Form.Group controlId="deliverInformation">
+      <Form.Control as="select" placeholder="Choose client">
+      <option>Levain</option>
+      <option>Gluten Free</option>
+      <option>Vegan</option>
+    </Form.Control>
+                </Form.Group>
+      </td>
+      <td>
+      <Form.Group controlId="deliverInformation">
+      <Form.Control as="select" placeholder="Choose client">
+      <option>Cruller</option>
+    </Form.Control>
+                </Form.Group>
+      </td>
+      <td>
+      <Form.Group controlId="deliverInformation">
+      <Form.Control as="select" placeholder="Choose client">
+      <option>Small</option>
+      <option>Regular</option>
+      <option>Large</option>
+    </Form.Control>
+                </Form.Group>
+      </td>
+      <td>
+      <Form.Group controlId="formPlaintextEmail">
+    <Col xs={true}>
+      <Form.Control />
+    </Col>
+  </Form.Group>
+      </td>
+    </tr>
+  </tbody>
+</Table>
           <Button variant="primary" size="lg" block>
               Add order
             </Button>
