@@ -3,6 +3,17 @@ import {Container,Row,Col} from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 class Orders extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={
+      businessName:"Demo business",
+      customerName:"Demo username",
+      deliverOn:"Mon,Tues,Wed",
+      Products:"Levain,Vegan",
+      Quantity:"150",
+    }
+  }
+
   render() {
     return (
       <div>
@@ -41,6 +52,17 @@ class Orders extends React.Component {
             <Col md={2} lg={2}>Products</Col>
             <Col md={1} lg={1}>Quantity</Col>
           </Row>
+          <Row className="px-1 py-3" id="whiteBoard">
+              <Col xs={8} md={5} lg={4}>
+                <b>{this.state.businessName}</b>
+                <p>{this.state.customerName}</p>
+              </Col>
+              <Col xs={8} md={5} lg={4}><p>{this.state.deliverOn}</p></Col>
+              <Col xs={8} md={2} lg={2}><p>{this.state.Products}</p></Col>
+              <Col xs={8} md={2} lg={2}><p>{this.state.Quantity}</p></Col>
+              <Col xs={8} md={1} lg={1}><NavLink to={`orders/edit/`}><i className="icon edit" /></NavLink></Col>
+            </Row>
+
           </Container>
       </div>
     );
